@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Configurações</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h2>Conta</h2>
+      <label for="email">Endereço de Email</label>
+      <input type="email" id="email" name="email" placeholder="seu@email.com">
+    </div>
+
+    <div class="section">
+      <h2>Unidades</h2>
+      <label>Temperatura:</label>
+      <div class="radio-group">
+        <input type="radio" id="c" name="temp" checked>
+        <label for="c">Celsius</label>
+        <input type="radio" id="f" name="temp">
+        <label for="f">Fahrenheit</label>
+      </div>
+      <label>Velocidade do Vento:</label>
+      <div class="radio-group">
+        <input type="radio" id="kmh" name="wind" checked>
+        <label for="kmh">km/h</label>
+        <input type="radio" id="mph" name="wind">
+        <label for="mph">mph</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Aparência</h2>
+      <div class="toggle">
+        <input type="checkbox" id="darkmode" checked>
+        <label for="darkmode">Modo escuro</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Notificações</h2>
+      <div class="toggle">
+        <input type="checkbox" id="email-alerts" checked>
+        <label for="email-alerts">Alertas por email</label>
+      </div>
+      <div class="toggle">
+        <input type="checkbox" id="mobile-alerts">
+        <label for="mobile-alerts">Alertas por mobile</label>
+      </div>
+    </div>
+
+    <button class="button">Salvar Alterações</button>
+  </div>
+</body>
+</html>
