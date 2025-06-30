@@ -1,0 +1,54 @@
+.azul {
+    background-color: rgba(99, 99, 228, 0.773);
+    color: white;
+    padding: 40px 0; /* Altura controlada pelo espaçamento interno */
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .card.clima {
+    background-color: #051770;
+    color: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .semana {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* impõe que fiquem na mesma linha */
+    gap: 5px;           /* reduz o espaço entre os itens */
+    margin-top: 15px;
+  }
+  
+  .dia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45px;        /* reduz a largura individual */
+    font-size: 15px;
+  }
+  
+
+
+
+
