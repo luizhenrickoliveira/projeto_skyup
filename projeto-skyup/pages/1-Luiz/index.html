@@ -1,1 +1,74 @@
-<!-- pagina do artur -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sky Up - Clima Brasil</title>
+    
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    </head>
+    <body>
+    
+    <header>
+      <div class="icon">☁️</div>
+      <h1>Sky Up</h1>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4" style="width: 100%; max-width: 480px; border-radius: 12px;">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../1-Luiz/index.html">Tela inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../2-Luiz/index.html">Tela de busca</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../3-Julia/index.html">Clima atual</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../4-Gi/index.html">Previsão futura</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../5-Milena/index.html">Favoritos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../6-Nicollas/index.html">Configurações</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <main>
+      <section class="search-container">
+        <input type="search" placeholder="Digite o nome da cidade..." aria-label="Busca de cidade" />
+      </section>
+    
+      <section class="weather-card" aria-live="polite">
+        <h2>Curitiba</h2>
+        <div class="temperature">
+          <span>13ºC</span>
+          <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" alt="Nublado" />
+        </div>
+        <p class="description">Nublado</p>
+        <div class="extra-info">
+          <span><img src="https://cdn-icons-png.flaticon.com/512/414/414974.png" alt="Umidade" /> 95%</span>
+          <span><img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" alt="Vento" /> 11 km/h</span>
+        </div>
+      </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    </body>
+    </html>
+    
