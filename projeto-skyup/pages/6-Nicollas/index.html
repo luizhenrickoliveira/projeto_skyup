@@ -1,57 +1,333 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Configurações</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações do Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinha no topo para melhor visualização */
+            min-height: 100vh;
+            margin: 20px 0; /* Adiciona um pouco de margem para não colar nas bordas */
+            box-sizing: border-box;
+        }
 
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .section {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .input-group img {
+            width: 28px;
+            height: 28px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 1px solid #ccc; /* Adiciona uma borda para simular a imagem */
+            background-color: #f0f0f0; /* Cor de fundo para simular a imagem */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #888;
+            font-size: 14px;
+        }
+        .input-group img::before {
+            content: "👤"; /* Ícone de usuário simples, pode ser substituído por uma imagem real */
+        }
+
+
+        .input-group input[type="email"] {
+            flex-grow: 1;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 30px; /* Espaçamento entre os radios */
+            margin-bottom: 15px;
+        }
+
+        .radio-item {
+            display: flex;
+            flex-direction: column; /* Para empilhar o label e os radios */
+        }
+
+        .radio-item-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .radio-item-row label {
+            margin-left: 8px;
+            font-size: 15px;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .radio-item-row input[type="radio"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #999;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            top: 1px;
+            margin-right: 0; /* Ajuste para espaçamento consistente */
+        }
+
+        .radio-item-row input[type="radio"]:checked {
+            border-color: #6699ff; /* Cor da borda quando selecionado */
+        }
+
+        .radio-item-row input[type="radio"]:checked::before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #6699ff; /* Cor do preenchimento quando selecionado */
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .switch-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .switch-label {
+            font-size: 16px;
+            color: #444;
+        }
+
+        /* Toggle switch styling */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 28px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 28px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #66bb6a; /* Cor verde para ON */
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #66bb6a;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(22px);
+            -ms-transform: translateX(22px);
+            transform: translateX(22px);
+        }
+
+        /* Specific colors for ON/OFF text */
+        .slider.on-text:after {
+            content: "ON";
+            color: white;
+            display: block;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            right: 15px; /* Adjust as needed */
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .slider.off-text:after {
+            content: "OFF";
+            color: white;
+            display: block;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 17px; /* Adjust as needed */
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        input:checked + .slider.off-text:after {
+            display: none;
+        }
+
+        input:not(:checked) + .slider.on-text:after {
+            display: none;
+        }
+
+        .save-button {
+            width: 100%;
+            padding: 12px 0;
+            background-color: #6a8be6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .save-button:hover {
+            background-color: #5577d6;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="section">
-      <h2>Conta</h2>
-      <label for="email">Endereço de Email</label>
-      <input type="email" id="email" name="email" placeholder="seu@email.com">
-    </div>
+    <div class="container">
+        <h2>Configurações do Usuário</h2>
 
-    <div class="section">
-      <h2>Unidades</h2>
-      <label>Temperatura:</label>
-      <div class="radio-group">
-        <input type="radio" id="c" name="temp" checked>
-        <label for="c">Celsius</label>
-        <input type="radio" id="f" name="temp">
-        <label for="f">Fahrenheit</label>
-      </div>
-      <label>Velocidade do Vento:</label>
-      <div class="radio-group">
-        <input type="radio" id="kmh" name="wind" checked>
-        <label for="kmh">km/h</label>
-        <input type="radio" id="mph" name="wind">
-        <label for="mph">mph</label>
-      </div>
-    </div>
+        <div class="section">
+            <div class="section-title">Conta</div>
+            <div class="input-group">
+                <img src="" alt="Ícone de Usuário"> <input type="email" placeholder="Endereço de Email">
+            </div>
+        </div>
 
-    <div class="section">
-      <h2>Aparência</h2>
-      <div class="toggle">
-        <input type="checkbox" id="darkmode" checked>
-        <label for="darkmode">Modo escuro</label>
-      </div>
-    </div>
+        <div class="section">
+            <div class="section-title">Unidades</div>
+            <div class="radio-group">
+                <div class="radio-item">
+                    <label>Temperatura</label>
+                    <div class="radio-item-row">
+                        <input type="radio" id="celsius" name="temperature" value="celsius" checked>
+                        <label for="celsius">Celsius</label>
+                    </div>
+                    <div class="radio-item-row">
+                        <input type="radio" id="fahrenheit" name="temperature" value="fahrenheit">
+                        <label for="fahrenheit">Fahrenheit</label>
+                    </div>
+                </div>
+                <div class="radio-item">
+                    <label>Velocidade do Vento</label>
+                    <div class="radio-item-row">
+                        <input type="radio" id="kmh" name="wind_speed" value="kmh" checked>
+                        <label for="kmh">km/h</label>
+                    </div>
+                    <div class="radio-item-row">
+                        <input type="radio" id="mph" name="wind_speed" value="mph">
+                        <label for="mph">mph</label>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="section">
-      <h2>Notificações</h2>
-      <div class="toggle">
-        <input type="checkbox" id="email-alerts" checked>
-        <label for="email-alerts">Alertas por email</label>
-      </div>
-      <div class="toggle">
-        <input type="checkbox" id="mobile-alerts">
-        <label for="mobile-alerts">Alertas por mobile</label>
-      </div>
-    </div>
+        <div class="section">
+            <div class="section-title">Aparência</div>
+            <div class="switch-group">
+                <span class="switch-label">Modo Escuro</span>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider on-text"></span>
+                </label>
+            </div>
+        </div>
 
-    <button class="button">Salvar Alterações</button>
-  </div>
+        <div class="section">
+            <div class="section-title">Notificações</div>
+            <div class="switch-group">
+                <span class="switch-label">Alertas por Email</span>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider on-text"></span>
+                </label>
+            </div>
+            <div class="switch-group">
+                <span class="switch-label">Alertas por Mobile</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider off-text"></span>
+                </label>
+            </div>
+        </div>
+
+        <button class="save-button">Salvar Alterações</button>
+    </div>
 </body>
 </html>
