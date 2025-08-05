@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.navbar {
+  background-color: #0051a3;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 25px;
+}
+
+.card {
+  padding: 15px;
+  border-radius: 15px;
+  color: rgb(0, 4, 245);
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 5px;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temp {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Cores dos cards */
+.azul {
+  background-color: #5b9bd5;
+}
+
+.cinza {
+  background-color: #a6a6a6;
+}
+
+.azul-claro {
+  background-color: #4a86e8;
+}
+
+.azul-escuro {
+  background-color: #0b0b61;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .temp {
+    font-size: 26px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+  }
+}
