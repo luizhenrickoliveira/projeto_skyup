@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sky Up - Clima Atual</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar moderna -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand site-title" href="#">🌤 Sky Up</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../1-Luiz/index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="../2-Luiz/index.html">Busca</a></li>
+          <li class="nav-item"><a class="nav-link" href="../3-Julia/index.html">Clima</a></li>
+          <li class="nav-item"><a class="nav-link" href="../4-Gi/index.html">Previsão</a></li>
+          <li class="nav-item"><a class="nav-link" href="../5-Milena/index.html">Favoritos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../6-Nicollas/index.html">Configurações</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container main-container">
+    <!-- Título e clima atual -->
+    <div class="card weather-main">
+      <h1 class="temperature">16°</h1>
+      <p class="city">Curitiba ☁️</p>
+    </div>
+
+  <!-- Previsão por hora com emojis ☀️☁️ -->
+<div class="card forecast">
+  <h5>Próximas horas</h5>
+  <div class="forecast-hours">
+    <div class="hour-block">
+      <div class="emoji">☁️</div>
+      <span>14h</span>
+    </div>
+    <div class="hour-block">
+      <div class="emoji">☁️</div>
+      <span>15h</span>
+    </div>
+    <div class="hour-block">
+      <div class="emoji">⛅</div>
+      <span>16h</span>
+    </div>
+    <div class="hour-block">
+      <div class="emoji">☀️</div>
+      <span>17h</span>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Informativo -->
+    <div class="card today-info">
+      <p>Temperatura de hoje<br><small>Quase igual ontem</small></p>
+    </div>
+
+    <!-- Favoritos -->
+    <div class="card favorites">
+      <input type="text" placeholder="Buscar cidade..." class="search-box" />
+      <ul class="city-list">
+        <li>Curitiba <span>Nublado ☁️</span></li>
+        <li>Cascavel <span>Sol ☀️</span></li>
+        <li>São Paulo <span>Sol ☀️</span></li>
+        <li>Rio de Janeiro <span>Sol ☀️</span></li>
+        <li>Londrina <span>Nublado ☁️</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
