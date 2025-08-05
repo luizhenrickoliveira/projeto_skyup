@@ -5,7 +5,7 @@ body {
   padding-top: 80px;
 }
 
-/* Navbar moderna */
+
 .custom-navbar {
   background-color: #3a7bd5 !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -20,14 +20,14 @@ body {
   gap: 8px;
 }
 
-/* Container principal */
+
 .main-container {
   max-width: 480px;
   margin: auto;
   padding: 15px;
 }
 
-/* Cartões */
+
 .card {
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -36,7 +36,7 @@ body {
   background-color: #ffffff;
 }
 
-/* Clima principal */
+
 .weather-main {
   text-align: center;
   background: linear-gradient(to right, #6dd5fa, #2980b9);
@@ -54,7 +54,7 @@ body {
   margin-top: 8px;
 }
 
-/* Previsão por hora */
+
 .forecast-hours {
   display: flex;
   justify-content: space-between;
@@ -68,7 +68,7 @@ body {
   font-size: 14px;
 }
 
-/* Informações do dia */
+
 .today-info {
   background-color: #f1f5f9;
   text-align: center;
@@ -76,7 +76,7 @@ body {
   color: #333;
 }
 
-/* Lista de cidades favoritas */
+
 .favorites .search-box {
   width: 100%;
   padding: 8px 12px;
@@ -100,7 +100,7 @@ body {
   color: #444;
 }
 
-/* Responsivo */
+
 @media (max-width: 576px) {
   .temperature {
     font-size: 48px;
