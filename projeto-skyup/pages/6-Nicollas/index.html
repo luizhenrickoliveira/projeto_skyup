@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Configurações do Usuário</title> <style>
+    <title>Configurações do Usuário</title> <style>
 
         body {
             font-family: 'Arial', sans-serif;
@@ -39,37 +39,11 @@
             padding-bottom: 20px;
         }
 
-        .section:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-
         .section-title {
             font-size: 18px;
             font-weight: bold;
             color: #555; 
             margin-bottom: 15px; 
-        }
-
-        .input-group {
-            display: flex; 
-            align-items: center; 
-            margin-bottom: 15px;
-        }
-
-        .input-group .user-icon {
-            width: 28px;
-            height: 28px;
-            margin-right: 10px; 
-            border-radius: 50%; 
-            border: 1px solid #ccc;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #888; 
-            font-size: 14px;
         }
 
         .input-group input[type="email"] {
@@ -88,11 +62,6 @@
             margin-bottom: 15px;
         }
 
-        .radio-item {
-            display: flex;
-            flex-direction: column; 
-        }
-
         .radio-item-row {
             display: flex;
             align-items: center;
@@ -106,36 +75,8 @@
             cursor: pointer; 
         }
 
-        .radio-item-row input[type="radio"] {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            width: 18px;
-            height: 18px;
-            border: 2px solid #999; 
-            border-radius: 50%; 
-            outline: none; 
-            cursor: pointer;
-            position: relative; 
-            top: 1px; 
-            margin-right: 0;
-        }
-
         .radio-item-row input[type="radio"]:checked {
             border-color: #6699ff; 
-        }
-
-        .radio-item-row input[type="radio"]:checked::before {
-            content: '';
-            display: block;
-            width: 10px;
-            height: 10px;
-            background-color: #6699ff;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); 
         }
 
         .switch-group {
@@ -143,11 +84,6 @@
             justify-content: space-between; 
             align-items: center; 
             margin-bottom: 15px;
-        }
-
-        .switch-label {
-            font-size: 16px;
-            color: #444;
         }
 
         .switch {
@@ -191,45 +127,10 @@
             background-color: #66bb6a; 
         }
 
-        input:focus + .slider {
-            box-shadow: 0 0 1px #66bb6a; 
-        }
-
         input:checked + .slider:before {
             transform: translateX(22px); 
         }
 
-        .slider.on-text:after {
-            content: "ON";
-            color: white;
-            display: block;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            top: 50%;
-            right: 15px; 
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .slider.off-text:after {
-            content: "OFF";
-            color: white;
-            display: block;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            top: 50%;
-            left: 17px; 
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        input:checked + .slider.off-text:after {
-            display: none; 
-        }
-
-        input:not(:checked) + .slider.on-text:after {
-            display: none;
-        }
         .save-button {
             width: 100%;
             padding: 12px 0;
@@ -252,7 +153,7 @@
     <div class="container">
         <h2>Configurações do Usuário</h2> <div class="section">
             <div class="section-title">Endereço de Email</div> <div class="input-group">
-                <div class="user-icon" aria-hidden="true">✉️</div> <input type="email" placeholder="Seu@Email.com" aria-label="Endereço de e-mail"> </div>
+                <input type="email" placeholder="Seu@Email.com" aria-label="Endereço de e-mail"> </div>
         </div>
 
         <div class="section">
@@ -279,15 +180,6 @@
                         <label for="mph">Mph</label>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Aparência</div> <div class="switch-group">
-                <span class="switch-label">Modo Escuro</span>
-                <label class="switch">
-                    <input type="checkbox" checked role="switch" aria-checked="true"> <span class="slider on-text"></span>
-                </label>
             </div>
         </div>
 
