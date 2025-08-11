@@ -1,72 +1,74 @@
-.azul {
-    background-color: rgba(99, 99, 228, 0.773);
-    color: white;
-    padding: 40px 0; /* Altura controlada pelo espaçamento interno */
-    font-size: 24px;
-    text-align: center;
-  }
-  
-  body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .card.clima {
-    background-color: #051770;
-    color: white;
-    padding: 20px;
-  
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-  }
-  
-  
-  .semana {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap; /* impõe que fiquem na mesma linha */
-    gap: 5px;           /* reduz o espaço entre os itens */
-    margin-top: 15px;
-  }
-  
-  .dia {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 45px;        /* reduz a largura individual */
-    font-size: 15px;
-  }
-<<<<<<< HEAD
-  
-/* linha título + ícone */
-.header{
-  display:flex;
-  justify-content:space-between; /* empurra um para cada lado */
-  align-items:center;
-  margin-bottom:18px;
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  margin: 0;
+  padding-top: 70px; /* Espaço pro menu fixo */
 }
 
-/* texto do título */
-.subtitle{
-  font-size:14px;
-  opacity:.9;
+.navbar {
+  background: #7297D3;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
-/* ícone grande à direita */
-.icon-big{
-  width:72px;   /* ajuste à vontade */
-  height:72px;
-  color:#ffcb05; /* amarelo; troque se quiser */
+
+/* Seções */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  
+section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgb(255, 255, 255);
+}
 
-=======
-  
->>>>>>> b292ac512c8ef4606d6d831c78d95f920d3089e6
+/*icone*/
+.top-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.top-info svg {
+  width: 40px;    
+  height: 40px;   
+  display: block; 
+  color: #ead10ef7;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*cor de cada um*/
+.Casa {
+background-color: #244780;
+color: #fff;
+}
+.Coroados {
+  background-color: #17298b;
+  color: #fff;
+}
+.Londres{
+  background-color: #0d1954;
+  color: #fff;
+}
+.Escolha {
+  background-color: rgb(4, 10, 49);
+  color: #fff;
+}
