@@ -17,13 +17,13 @@ Bom o SKYUP é um app para você ver a previsão do tempo, de onde você quiser,
 
 ## Prints do App Funcionando
 
-![Tela Inicial]
+Tela Inicial
 ![Imagem do WhatsApp de 2025-08-11 à(s) 00 47 38_fa544341](https://github.com/user-attachments/assets/7782d8ea-a5b7-44aa-9049-a2e363f60c74)
 ![Imagem do WhatsApp de 2025-08-11 à(s) 00 47 39_eed79e9b](https://github.com/user-attachments/assets/8fbd6b6d-09f3-4457-a1b8-fe7a1714ea1b)
 Essa é a tela inicial, na qual a pessoa entra e já se depara com essa tela. Ela foi feita pelo aluno Luiz, as complicações dele foram principalmente com a API, e no final acabou não colocando 
 
 
-Tela de Busca~
+Tela de Busca
 ![Imagem do WhatsApp de 2025-08-11 à(s) 00 48 39_054e0128](https://github.com/user-attachments/assets/28ed7eec-2b85-4728-89de-75222b543982)
 ![Imagem do WhatsApp de 2025-08-11 à(s) 00 48 39_b0f00753](https://github.com/user-attachments/assets/d995208d-2b1d-4230-b467-27cdae9458a6)
 A Tela de Busca serve para ver outro local onde você goste, por exemplo Londres, você pode simplismente entar adicionar qual a cidade você deseja. Essa também foi o aluno Luiz que fez, e também teve complicações com a API e deixou sem. 
