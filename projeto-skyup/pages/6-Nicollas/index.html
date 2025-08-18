@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <link rel="stylesheet" href="styles.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configurações do Usuário</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h2>Configurações do Usuário</h2> <div class="section">
-            <div class="section-title">Endereço de Email</div> <div class="input-group">
-                <input type="email" placeholder="Seu@Email.com" aria-label="Endereço de e-mail"> </div>
+        <h2>Configurações do Usuário</h2>
+
+        <div class="section">
+            <div class="section-title">Endereço de Email</div>
+            <div class="input-group">
+                <input type="email" placeholder="Seu@Email.com">
+            </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Unidades</div> <div class="radio-group">
+            <div class="section-title">Unidades</div>
+            <div class="radio-group">
                 <div class="radio-item">
-                    <label>Temperatura</label>
+                    <span>Temperatura</span>
                     <div class="radio-item-row">
                         <input type="radio" id="celsius" name="temperature" value="celsius" checked>
                         <label for="celsius">Celsius</label>
@@ -26,8 +31,9 @@
                         <label for="fahrenheit">Fahrenheit</label>
                     </div>
                 </div>
+
                 <div class="radio-item">
-                    <label>Velocidade do Vento</label>
+                    <span>Velocidade do Vento</span>
                     <div class="radio-item-row">
                         <input type="radio" id="kmh" name="wind_speed" value="kmh" checked>
                         <label for="kmh">Km/h</label>
@@ -41,22 +47,26 @@
         </div>
 
         <div class="section">
-            <div class="section-title">Notificações</div> <div class="switch-group">
+            <div class="section-title">Notificações</div>
+            <div class="switch-group">
                 <span class="switch-label">Alertas por E-mail</span>
                 <label class="switch">
-                    <input type="checkbox" checked role="switch" aria-checked="true">
-                    <span class="slider on-text"></span>
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
                 </label>
             </div>
             <div class="switch-group">
                 <span class="switch-label">Alertas por SMS</span>
                 <label class="switch">
-                    <input type="checkbox" role="switch" aria-checked="false">
-                    <span class="slider off-text"></span>
+                    <input type="checkbox">
+                    <span class="slider"></span>
                 </label>
             </div>
         </div>
 
-        <button class="save-button" type="submit">Salvar Alterações</button> </div>
+  
+        <a class="save-button" href="../1-Luiz/index.html">Salvar Alterações</a>
+
+    </div>
 </body>
 </html>
